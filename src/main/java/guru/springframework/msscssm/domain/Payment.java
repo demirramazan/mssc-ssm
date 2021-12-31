@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -19,4 +20,6 @@ public class Payment {
 
     @Enumerated(EnumType.STRING)
     private PaymentState state;
+
+    private BigDecimal amount;
 }
